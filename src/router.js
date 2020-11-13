@@ -14,22 +14,27 @@ const router = new VueRouter ({
         {
         path : "/",
         name : "admin",
-        component : importComponent ('DashboardLayout') ,
+        component : importComponent ('DashboardLayout'),
         children : [
                 // Dashboard
                 {
                     path : "/",
                     name : "Root",
-                    component : importComponent ('Dashboard') ,
-                    } ,
+                    component : importComponent ('Dashboard'),
+                },
                     // To do list
-                    {
+                {
                     path : "/gd",
                     name : "Guided",
-                    component : importComponent ('TodoList/List') ,
-                } ,
+                    component : importComponent ('TodoList/List'),
+                },
+                {
+                    path : "/ugd",
+                    name : "Unguided",
+                    component : importComponent ('TodoList/ListUGD'),
+                },
             ]
-        } ,
+        },
     ]
-}) ;
+});
 export default router;
